@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Ships</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="controls">
+            <form id="form" method="post">
+                <label for="port-name">Add port:</label>
+                <input type="text" id="port-name" name="port-name" placeholder="Where next?">
+                <input type="submit" id="submit-btn" name="submit-btn">
+            </form>
+            <div id="heads-up"></div>
+        </div>
+    
+        <div id="viewport">
+            <div id="ports"></div>
+            <div id="ship"></div>
+            <button id="sailbutton">Set sail >></button>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/src/Controller.js"></script>
+    <script src="/src/Itinerary.js"></script>
+    <script src="/src/Port.js"></script>
+    <script src="/src/Ship.js"></script>
+    <script src="/src/Form.js"></script>
+
+    <script>
+        const quirmPort = new Port('Quirm');
+        const ramkinHallPort = new Port('Ramkin Hall');
+        const itinerary = new Itinerary([quirmPort, ramkinHallPort]);
+        const wonderfulFannyShip = new Ship(itinerary);
+        const controller = new Controller(wonderfulFannyShip);
+
+        controller.renderPorts(itinerary.ports);
+        controller.renderShip(wonderfulFannyShip);
+    </script>
+
+</body>
+</html>

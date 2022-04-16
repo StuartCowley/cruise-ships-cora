@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+#viewport {
+    width: 640px;
+    height: 256px;
+    position: relative;
+    overflow-x: auto;
+    background-image: url("/images/water0.png");
+}
+
+#ports {
+    width: 0px;
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ports > .port {
+    width: 64px;
+    height: 32px;
+    background-image: url("/images/port.png");
+}
+
+#ship {
+    background-image: url('/images/ship.png');
+    width: 128px;
+    height: 64px;
+    position: absolute;
+}
+
+#sailbutton {
+    position: sticky;
+    top: 256px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5em 1.5em;
+    border: none;
+    background-color: rgb(186, 104, 145);
+    color: white;
+}
+
+#sailbutton:hover {
+    background-color: rgb(140, 77, 108);
+}
+
+#message{
+    display: inline-block;
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 256px;
+    font-size: 1.2rem;
+    background-color: bisque;
+    text-align: center;
+    padding: .55em;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    min-height: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+    margin-bottom: 1rem;
+}
+
+#heads-up {
+    color: bisque;
+    align-self: flex-end;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(186, 104, 145);
+    color: bisque;
+    padding: 1rem;
+}
+
+input {
+    padding: .5em;
+    font-family: inherit;
+    border: none;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+}
+
+#port-name {
+    background-color: bisque;
+    margin-bottom: .5rem;
+}
+
+#submit-btn {
+    font-weight: 600;
+    letter-spacing: .1em;
+    background-color: rgb(25, 174, 255);
+    color: bisque;
+}
+
+#submit-btn:hover {
+    background-color: rgb(20, 138, 201);
+}
